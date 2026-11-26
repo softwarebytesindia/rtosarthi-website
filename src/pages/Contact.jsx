@@ -1,0 +1,144 @@
+import SectionHeading from '../components/SectionHeading'
+import PageHero from '../components/PageHero'
+import Button from '../components/Button'
+import { IconMapPin, IconMail, IconPhone, IconWhatsApp, IconLinkedIn, IconX, IconInstagram, IconFacebook } from '../components/Icons'
+import {
+  EMAIL,
+  PHONE_PRIMARY,
+  PHONE_SECONDARY,
+  phonePrimaryDisplay,
+  phoneSecondaryDisplay,
+  whatsappUrl,
+  SOCIAL_LINKS,
+} from '../data/contact'
+import {
+  container,
+  section,
+  glassCard,
+  grid2,
+  cn,
+} from '../lib/styles'
+
+const contactItems = [
+  {
+    icon: <IconPhone />,
+    title: 'Phone',
+    content: (
+      <>
+        <p>
+          <a href={`tel:+91${PHONE_PRIMARY}`} className="text-sm text-slate-600 hover:text-brand-800 sm:text-base">
+            {phonePrimaryDisplay}
+          </a>
+        </p>
+        <p>
+          <a href={`tel:+91${PHONE_SECONDARY}`} className="text-sm text-slate-600 hover:text-brand-800 sm:text-base">
+            {phoneSecondaryDisplay}
+          </a>
+        </p>
+      </>
+    ),
+  },
+  {
+    icon: <IconWhatsApp />,
+    title: 'WhatsApp',
+    content: (
+      <p>
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm font-medium text-[#128C7E] hover:text-[#25D366] sm:text-base"
+        >
+          {phonePrimaryDisplay} — Chat now
+        </a>
+      </p>
+    ),
+  },
+  {
+    icon: <IconMail />,
+    title: 'Email',
+    content: (
+      <p>
+        <a href={`mailto:${EMAIL}`} className="text-sm text-slate-600 hover:text-brand-800 sm:text-base">
+          {EMAIL}
+        </a>
+      </p>
+    ),
+  },
+  {
+    icon: <IconMapPin />,
+    title: 'Office',
+    content: (
+      <p className="text-sm text-slate-600 sm:text-base">
+        SoftwareBytes, Raipur, Chhattisgarh, India — 492001
+      </p>
+    ),
+  },
+]
+
+export default function Contact() {
+  return (
+    <>
+      <PageHero title="Connect with us" subtitle="Simplify your RTO workflow — request a free trial, book a demo, or reach out anytime." />
+
+      <section className={section}>
+        <div className={cn(container, 'mx-auto max-w-2xl')}>
+          <SectionHeading
+            label="Direct contact"
+            title="Reach us instantly"
+            description="Call, WhatsApp, or email — our team is ready to help you get started with RTO Sarthi."
+          />
+
+          <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:justify-center">
+            <Button href={whatsappUrl} variant="primary" size="lg" className="w-full sm:w-auto">
+              Chat on WhatsApp
+            </Button>
+            <Button href={`tel:+91${PHONE_PRIMARY}`} variant="outline-dark" size="lg" className="w-full sm:w-auto">
+              Call {phonePrimaryDisplay}
+            </Button>
+          </div>
+
+          <div className={grid2}>
+            {contactItems.map((item) => (
+              <div key={item.title} className={`${glassCard} flex gap-4 p-6`}>
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-brand-800 [&_svg]:h-5 [&_svg]:w-5">
+                  {item.icon}
+                </div>
+                <div>
+                  <strong className="mb-1 block text-base font-semibold text-slate-900">{item.title}</strong>
+                  {item.content}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-6 flex h-40 flex-col items-center justify-center gap-1 rounded-xl border border-dashed border-brand-200 bg-gradient-to-br from-slate-50 to-brand-50/50 text-slate-600">
+            <span className="text-brand-800 [&_svg]:h-7 [&_svg]:w-7">
+              <IconMapPin />
+            </span>
+            <span className="text-sm font-medium">Raipur, Chhattisgarh, India</span>
+            <span className="text-sm">Interactive map embed coming soon</span>
+          </div>
+
+          <div className="mt-5 flex justify-center gap-2" aria-label="Social links">
+            <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" title="LinkedIn" className="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-100 text-slate-600 transition-colors hover:bg-[#0A66C2] hover:text-white [&_svg]:h-5 [&_svg]:w-5">
+              <IconLinkedIn />
+            </a>
+            <a href={SOCIAL_LINKS.x} target="_blank" rel="noopener noreferrer" title="X" className="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-100 text-slate-600 transition-colors hover:bg-black hover:text-white [&_svg]:h-5 [&_svg]:w-5">
+              <IconX />
+            </a>
+            <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" title="Instagram" className="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-100 text-slate-600 transition-colors hover:bg-[#E4405F] hover:text-white [&_svg]:h-5 [&_svg]:w-5">
+              <IconInstagram />
+            </a>
+            <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" title="Facebook" className="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-100 text-slate-600 transition-colors hover:bg-[#1877F2] hover:text-white [&_svg]:h-5 [&_svg]:w-5">
+              <IconFacebook />
+            </a>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" title="WhatsApp" className="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-100 text-slate-600 transition-colors hover:bg-[#25D366] hover:text-white [&_svg]:h-5 [&_svg]:w-5">
+              <IconWhatsApp />
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}

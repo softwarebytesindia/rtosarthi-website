@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/* Palette from rtosarthi.avif — navy blue + vibrant orange */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Poppins", "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-950: #083c92;
+  --color-brand-900: #0f4bac;
+  --color-brand-800: #114cab;
+  --color-brand-700: #1656c6;
+  --color-brand-600: #1a66d4;
+  --color-brand-200: #b8cff5;
+  --color-brand-100: #e8f1fc;
+  --color-brand-50: #f4f8fe;
+
+  --color-accent-600: #fa5608;
+  --color-accent-500: #ff7f09;
+  --color-accent-400: #ff9940;
+  --color-accent-200: #ffd4b3;
+  --color-accent-100: #fff0e6;
+  --color-accent-50: #fffaf5;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-screen font-sans text-sm leading-relaxed text-slate-600 antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-bold tracking-tight text-slate-900;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer utilities {
+  .animate-in {
+    animation: fade-up 0.55s ease forwards;
+  }
+
+  .animate-delay-2 {
+    animation-delay: 0.12s;
+    opacity: 0;
+  }
+
+  .text-gradient-brand {
+    @apply bg-gradient-to-r from-brand-800 to-accent-500 bg-clip-text text-transparent;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}

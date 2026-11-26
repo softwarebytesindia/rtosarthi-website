@@ -1,0 +1,96 @@
+/**
+ * Every solution page, grouped by topic. Used by the homepage hub, the sitemap page and the
+ * "related solutions" block, so a new page added here is linked from all of them.
+ * The first page of each group is its main (hub) page.
+ */
+export const SOLUTION_GROUPS = [
+  {
+    key: 'rto',
+    title: 'RTO Agent Software',
+    description: 'Run the whole RTO desk: vehicles, clients, renewals, balances and leads.',
+    items: [
+      { to: '/rto-management-software', label: 'RTO Management Software', desc: 'Expiry tracking, WhatsApp alerts, client balances & demo video for RTO agents' },
+      { to: '/best-rto-office-software', label: 'Best RTO Office Software', desc: 'Run the whole RTO office: staff logins, WhatsApp reminders, client balances, LL / DL and RC search' },
+      { to: '/rto-agent-crm-software', label: 'RTO Agent CRM Software', desc: 'Client & vehicle CRM for RTO agents with WhatsApp expiry reminders, pending balance and LL / DL clients' },
+      { to: '/rto-agent-lead-management-software', label: 'RTO Agent Lead Management Software', desc: 'Track permit, tax, fitness, PUC & insurance enquiries with follow-up lists, one-tap call & WhatsApp' },
+      { to: '/puc-agent-software', label: 'PUC Agent Software', desc: 'Bulk Excel upload, PDF auto-entry, WhatsApp PUC reminders & complete RTO/insurance management' },
+      { to: '/rto-agent-app', label: 'RTO Agent App', desc: 'RTO Sarthi app for Android, iPhone & PC: clients, WhatsApp reminders, RC search & balances on your phone' },
+      { to: '/cloud-rto-software', label: 'Cloud RTO Software', desc: 'RTO Sarthi in the cloud: data backed up online, PC & mobile, staff logins and WhatsApp reminders' },
+      { to: '/rto-offline-software', label: 'RTO Offline Software', desc: 'Offline vs online: install RTO Sarthi on your PC like desktop software, with data backed up online' },
+      { to: '/rto-agent-software-free-download', label: 'RTO Agent Software Free Download', desc: 'Free trial: use RTO Sarthi free on Android, iPhone, Windows and web' },
+    ],
+  },
+  {
+    key: 'vehicle',
+    title: 'Vehicle Information & RC',
+    description: 'Search any vehicle number for RC details, from ₹1.5 per search.',
+    items: [
+      { to: '/vehicle-information-software', label: 'Vehicle Information Software', desc: 'Vehicle number search: RC & Particular download, tax, e-challan, fitness, PUC & insurance status' },
+      { to: '/vehicle-details-software', label: 'Vehicle Details Software', desc: 'Search any vehicle number, download RC & Particulars, print Form 23, save to records with WhatsApp reminders' },
+      { to: '/rc-download-software', label: 'RC Download Software', desc: 'Download RC of any vehicle at just ₹1.5: smart card style RC PDF for RTO agents' },
+      { to: '/rc-verification-software', label: 'RC Verification Software', desc: 'Verify RC of any vehicle at ₹1.5: owner, chassis, engine, HP & blacklist, plus bulk verification' },
+    ],
+  },
+  {
+    key: 'api',
+    title: 'Vehicle APIs',
+    description: 'Vehicle data by vehicle number in your own software, as JSON from ₹1.5 per search.',
+    items: [
+      { to: '/vehicle-information-api', label: 'Vehicle Information API', desc: 'RC details by vehicle number for your software as JSON, from ₹1.5 per successful search' },
+      { to: '/vehicle-details-api', label: 'Vehicle Details API India', desc: 'API for getting vehicle details of any Indian vehicle number, incl. BH series, for insurance, used car, loan and fleet software' },
+      { to: '/vehicle-registration-details-api', label: 'Vehicle Registration Details API', desc: 'Registration date, validity, RTO, status and owner count of any vehicle number as JSON' },
+      { to: '/vehicle-data-api', label: 'Vehicle Data API India', desc: 'Complete vehicle data by registration number as JSON: registration, owner, specs, validity, financer & NOC' },
+      { to: '/car-details-api', label: 'Car Details API', desc: 'Car model, variant, fuel, CC, year, owner count and insurance from any car number' },
+      { to: '/car-information-api', label: 'Car Information API', desc: 'Car info API: full car record by number with owner count, validity dates, financer, blacklist & NOC' },
+      { to: '/motorcycle-api-india', label: 'Motorcycle API India', desc: 'Bike and scooter details by number: model, CC, fuel, owner count, insurance and PUC' },
+      { to: '/vehicle-make-and-model-api', label: 'Vehicle Make and Model API', desc: 'Maker, model, class, fuel, BS norms, CC, seating and year from any vehicle number' },
+      { to: '/vehicle-insurance-api', label: 'Vehicle Insurance API', desc: 'Insurer, policy number and insurance expiry of any vehicle number for agents, fleets and insurtech' },
+      { to: '/vehicle-puc-details-api', label: 'Vehicle PUC Details API', desc: 'RC to PUC details: PUC certificate number and validity of any vehicle number as JSON' },
+      { to: '/vehicle-fitness-details-api', label: 'Vehicle Fitness Details API', desc: 'Fitness validity of any vehicle number as JSON, with permit, insurance, PUC and tax validity' },
+      { to: '/rc-to-road-tax-details-api', label: 'RC to Road Tax Details API', desc: 'Road tax paid-up-to date or lifetime tax of any vehicle number as JSON, with fitness, insurance and PUC' },
+      { to: '/vehicle-to-hsrp-details-api', label: 'Vehicle to HSRP Details API', desc: 'Front and rear HSRP laser codes of any vehicle number as JSON, with maker, fuel, norms and registration date' },
+      { to: '/vehicle-verification-api', label: 'Vehicle Verification API', desc: 'Verify any vehicle before onboarding: registration status, validity dates, financer, blacklist & NOC' },
+      { to: '/vehicle-rc-verification-api', label: 'Vehicle RC Verification API', desc: 'Verify RC by vehicle number: owner, chassis, engine, status, financer, blacklist & NOC as JSON' },
+      { to: '/chassis-number-to-vehicle-api', label: 'Chassis Number to Vehicle API', desc: 'Vehicle registration number and details of any chassis number (VIN), as JSON' },
+      { to: '/rc-to-chassis-number-api', label: 'RC to Chassis Number API', desc: 'Chassis number (VIN) and engine number of any vehicle from its RC number, as JSON' },
+      { to: '/rc-to-registration-date-api', label: 'RC to Registration Date API', desc: 'Registration date, validity and manufacturing date of any vehicle from its RC number, as JSON' },
+      { to: '/vehicle-lookup-api', label: 'Vehicle Lookup API', desc: 'Look up any registration number: status, owner, chassis & engine, validity, financer, blacklist & NOC' },
+      { to: '/parivahan-api', label: 'Parivahan API', desc: 'Parivahan API to get vehicle details by vehicle number, cost from ₹1.5 per search with no monthly fee' },
+      { to: '/vahan-api', label: 'Vahan API for Vehicle Details', desc: 'Owner, chassis, engine, financer, insurance, PUC, fitness, blacklist & NOC by vehicle number' },
+    ],
+  },
+  {
+    key: 'reminders',
+    title: 'Expiry Reminder Software',
+    description: 'Automatic WhatsApp reminders before any document expires.',
+    items: [
+      { to: '/vehicle-document-expiry-reminder-software', label: 'Vehicle Document Expiry Reminder Software', desc: 'Automatic WhatsApp reminders for tax, fitness, permit, PUC, insurance and GPS expiry' },
+      { to: '/document-expiry-reminder-software', label: 'Document Expiry Reminder Software', desc: 'Automatic WhatsApp reminders for every type of document with an expiry date' },
+      { to: '/national-permit-renewal-reminder-software', label: 'National Permit Renewal Reminder Software', desc: 'Track national permit Part A & Part B validity with WhatsApp renewal reminders' },
+    ],
+  },
+  {
+    key: 'driving-school',
+    title: 'Driving School Software',
+    description: 'Admissions, fees, LL / DL tracking and RTO work for driving schools.',
+    items: [
+      { to: '/driving-school-software', label: 'Driving School Software', desc: 'Manage driving school admissions, fees, documents, LL / DL and RTO work' },
+      { to: '/driving-school-management-software', label: 'Driving School Management Software', desc: 'Admissions register, fee dues, student documents, auto WhatsApp for DL eligibility' },
+      { to: '/driving-school-management-system', label: 'Driving School Management System', desc: 'Connected system from admission to DL with fee instalments and WhatsApp follow-ups' },
+      { to: '/driving-school-crm', label: 'Driving School CRM', desc: 'Student records, automatic WhatsApp follow-ups, referral sources and fee dues' },
+      { to: '/best-driving-school-software-india', label: 'Best Driving School Software India', desc: 'Buyer guide: what the best driving school software in India needs' },
+    ],
+  },
+  {
+    key: 'licence',
+    title: 'Driving Licence Software',
+    description: 'Learner licence to permanent DL, with automatic WhatsApp follow-ups.',
+    items: [
+      { to: '/driving-licence-software', label: 'Driving Licence Software', desc: 'Manage learner licence and DL applications, documents, fees and LL to DL alerts' },
+      { to: '/learning-licence-software', label: 'Learning Licence Software', desc: 'Automatic WhatsApp 30 days after LL for DL eligibility and LL expiry dashboard' },
+      { to: '/driving-licence-management-system', label: 'Driving Licence Management System', desc: 'One system for LL, DL and renewals with WhatsApp follow-ups and multi-agent access' },
+    ],
+  },
+]
+
+export const groupOfPath = (path) => SOLUTION_GROUPS.find((g) => g.items.some((i) => i.to === path))
